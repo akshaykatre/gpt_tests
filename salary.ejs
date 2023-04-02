@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <h1>Salary Calculator</h1>
+
+    <form>
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country" value="<%= country %>"><br><br>
+
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" value="<%= age %>"><br><br>
+
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" value="<%= city %>"><br><br>
+
+      <button type="submit">Calculate Salary</button>
+    </form>
+
+    <% if (salary) { %>
+      <div>Your salary is $<%= salary %>!</div>
+    <% } else if (error) { %>
+      <div>An error occurred: <%= error %></div>
+    <% } %>
+  </body>
+</html>
